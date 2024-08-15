@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
-import { Bars3Icon, PlusIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "My Story", href: "/", current: false },
@@ -30,7 +30,10 @@ const Header: React.FC = () => {
                   <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
                 </Disclosure.Button>
               </div>
-              <h1 className="text-white text-2xl font-bold">CheySpace</h1>
+              {/* Adjust CheySpace font size for smaller screens */}
+              <h1 className="text-white font-bold text-xl sm:text-2xl">
+                CheySpace
+              </h1>
               <div className="hidden md:flex md:space-x-8 ml-4">
                 {navigation.map((item) => (
                   <Link
@@ -52,11 +55,11 @@ const Header: React.FC = () => {
               </div>
             </div>
             <div className="flex items-center">
+              {/* Adjust Donate Now button size for smaller screens */}
               <button
                 type="button"
-                className="relative inline-flex items-center gap-x-1.5 rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="relative inline-flex items-center rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 sm:px-2 sm:py-1 sm:text-xs"
               >
-                <PlusIcon className="-ml-0.5 h-5 w-5" aria-hidden="true" />
                 Donate Now!
               </button>
             </div>
