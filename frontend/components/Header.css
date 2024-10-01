@@ -1,6 +1,27 @@
 .header-container {
-  background-color: #2d3748;
+  background: linear-gradient(
+    to bottom,
+    #2e8b57 0%,
+    /* Sea Green */ #3cb371 25%,
+    /* Medium Sea Green */ #228b22 50%,
+    /* Forest Green */ #006400 75%,
+    /* Dark Green */ #556b2f 100% /* Dark Olive Green */
+  );
+  background-size: 200% 200%;
   color: #ffffff;
+  animation: gradientAnimation 18s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .header-title {

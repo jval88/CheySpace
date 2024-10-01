@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import Donation from "../models/donation";
+import Donation from "../models/Donation";
 
 export const getDonations = async (req: Request, res: Response) => {
   try {

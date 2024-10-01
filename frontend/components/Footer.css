@@ -15,9 +15,28 @@ main {
 }
 
 footer {
-  background-color: #242424;
+  background: linear-gradient(
+    to top,
+    #4b2e26 0%,
+    /* Dark Brown */ #8b4513 50%,
+    /* Saddle Brown */ #a0522d 100% /* Sienna */
+  );
+  background-size: 200% 200%;
   color: #ffffff;
   padding: 1rem;
   text-align: center;
   width: 100%;
+  animation: footerGradientAnimation 18s ease infinite;
+}
+
+@keyframes footerGradientAnimation {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
